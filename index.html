@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gerador CNAB 240</title>
+    <meta name="description" content="Gere e valide arquivos de remessa CNAB 240 (FEBRABAN v11.0) a partir de uma planilha. Roda no navegador; nenhum dado sai da sua máquina." />
+    <meta property="og:title" content="Gerador CNAB 240" />
+    <meta property="og:description" content="Planilha de pagamentos para remessa FEBRABAN 240, com validação campo a campo. Open source, roda no navegador." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23176b4d'/%3E%3Cpath d='M8 11h16M8 16h16M8 21h10' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="./">
+          <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor" /><path d="M8 11h16M8 16h16M8 21h10" stroke="var(--bg)" stroke-width="2.5" stroke-linecap="round" /></svg>
+          cnab-generator
+        </a>
+        <nav>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="https://github.com/KelvuHQ/cnab-generator/tree/main/docs">Documentação</a>
+          <a href="https://github.com/KelvuHQ/cnab-generator">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <h1>Remessas CNAB 240 corretas, campo a campo.</h1>
+        <p class="lede">
+          Transforme uma planilha de pagamentos numa remessa FEBRABAN 240 e valide qualquer arquivo campo a campo, com a posição exata de cada erro.
+          Tudo roda no seu navegador: nenhum dado sai da sua máquina.
+        </p>
+        <ul class="facts">
+          <li>Layout FEBRABAN v11.0</li>
+          <li>Crédito em conta e TED</li>
+          <li>CNPJ alfanumérico</li>
+          <li>Open source, MIT</li>
+        </ul>
+      </section>
+
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tab-gerar" aria-selected="true" aria-controls="panel-gerar">Gerar remessa</button>
+        <button role="tab" id="tab-validar" aria-selected="false" aria-controls="panel-validar">Validar arquivo</button>
+      </div>
+
+      <section id="panel-gerar" role="tabpanel" aria-labelledby="tab-gerar" class="panel"></section>
+      <section id="panel-validar" role="tabpanel" aria-labelledby="tab-validar" class="panel" hidden></section>
+
+      <section id="como-funciona" class="explain">
+        <h2>Como funciona</h2>
+        <div class="explain-grid">
+          <div>
+            <h3>Um layout, três usos</h3>
+            <p>As posições de cada campo estão num único arquivo, copiado do manual FEBRABAN v11.0. O gerador escreve com ele, o validador lê com ele e a referência da documentação é gerada a partir dele.</p>
+          </div>
+          <div>
+            <h3>Erro em vez de palpite</h3>
+            <p>Valores como "1.234" são ambíguos: mil reais ou um real? O gerador pergunta em vez de adivinhar. Centavos são inteiros do começo ao fim, e datas não sofrem com fuso horário.</p>
+          </div>
+          <div>
+            <h3>Lotes do jeito que o banco espera</h3>
+            <p>Pagamentos para o mesmo banco viram crédito em conta (forma 01). Para outros bancos, TED (forma 41, ou 43 quando a conta é da própria empresa). Cada forma vai em um lote separado.</p>
+          </div>
+          <div>
+            <h3>Testado contra si mesmo</h3>
+            <p>Cada arquivo gerado passa pelo validador nos testes, com 500 pagamentos aleatórios. O validador também confere totais, contagens, sequenciais, CPF/CNPJ e finais de linha.</p>
+          </div>
+        </div>
+        <h3>O que ainda não faz</h3>
+        <p class="muted">Pix (formas 45 e 47), boletos (segmento J), tributos e leitura de arquivos de retorno. Cada banco ainda pode pedir ajustes ao padrão; confira o manual do seu. Veja o <a href="https://github.com/KelvuHQ/cnab-generator/blob/main/docs/product/roadmap.md">roadmap</a>.</p>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <span>MIT · feito por <a href="https://github.com/Andrel666">André Lajter</a></span>
+      <span>Não é afiliado à FEBRABAN nem a nenhum banco.</span>
+    </footer>
+
+    <script type="module" src="/web/main.ts"></script>
+  </body>
+</html>

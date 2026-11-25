@@ -1,0 +1,23 @@
+name: Erro / Bug
+description: O gerador ou o validador fez algo errado.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "**Use só dados fictícios.** Troque nomes, CPF/CNPJ e contas antes de anexar qualquer arquivo."
+  - type: textarea
+    id: oque
+    attributes:
+      label: O que aconteceu e o que você esperava
+    validations:
+      required: true
+  - type: textarea
+    id: arquivo
+    attributes:
+      label: Linha do arquivo ou da planilha (dados fictícios)
+      render: text
+  - type: input
+    id: onde
+    attributes:
+      label: Onde
+      placeholder: app no navegador, CLI, biblioteca

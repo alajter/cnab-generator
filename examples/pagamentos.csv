@@ -1,0 +1,4 @@
+nome;cpf_cnpj;banco;agencia;conta;valor;data_pagamento;seu_numero
+João da Silva;529.982.247-25;341;0001;12345-6;2.500,75;27/11/2026;NF 1021
+Maria Souza ME;11.444.777/0001-61;237;3456;98765-4;1.400,00;27/11/2026;NF 1022
+Distribuidora Alfa Ltda;12.ABC.345/01DE-35;001;4321-0;55443-2;12.980,10;27/11/2026;NF 1023

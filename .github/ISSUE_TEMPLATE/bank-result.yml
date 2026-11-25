@@ -1,0 +1,45 @@
+name: Resultado no banco / Bank result
+description: Você enviou uma remessa gerada ou validada aqui. O banco aceitou?
+title: "[banco] "
+labels: [bank-result]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado! Isso alimenta a [tabela de compatibilidade](https://github.com/KelvuHQ/cnab-generator/blob/main/docs/bank-compatibility.md).
+        **Não anexe arquivos com dados reais.**
+  - type: input
+    id: banco
+    attributes:
+      label: Banco (nome e código)
+      placeholder: Itaú 341
+    validations:
+      required: true
+  - type: dropdown
+    id: resultado
+    attributes:
+      label: Resultado
+      options:
+        - Aceito na primeira tentativa
+        - Aceito depois de ajustes
+        - Rejeitado
+    validations:
+      required: true
+  - type: dropdown
+    id: forma
+    attributes:
+      label: Tipo de pagamento
+      multiple: true
+      options:
+        - Crédito em conta (forma 01)
+        - TED (forma 41 ou 43)
+  - type: textarea
+    id: detalhes
+    attributes:
+      label: Códigos de rejeição ou ajustes necessários
+      description: Ex.: versão do layout pedida pelo banco, finalidade da TED obrigatória, formato do convênio.
+  - type: input
+    id: canal
+    attributes:
+      label: Canal de envio
+      placeholder: Internet banking empresarial, VAN, API...

@@ -1,0 +1,51 @@
+{
+  "name": "cnab-generator",
+  "version": "1.0.0",
+  "description": "Generate and validate FEBRABAN CNAB 240 payment files (remessa de pagamentos) in the browser, from a spreadsheet.",
+  "type": "module",
+  "license": "MIT",
+  "author": "André Lajter",
+  "homepage": "https://kelvuhq.github.io/cnab-generator/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KelvuHQ/cnab-generator.git"
+  },
+  "keywords": [
+    "cnab",
+    "cnab240",
+    "febraban",
+    "remessa",
+    "pagamentos",
+    "ted",
+    "brasil"
+  ],
+  "bin": {
+    "cnab": "dist-cli/cnab.mjs"
+  },
+  "files": [
+    "dist-cli"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && npm run build:cli",
+    "build:cli": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist-cli/cnab.mjs --banner:js='#!/usr/bin/env node'",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "docs:layout": "tsx scripts/layout-doc.ts > docs/layout.md"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "esbuild": "^0.25.12",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1",
+    "vitest": "^4.1.12"
+  },
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}
