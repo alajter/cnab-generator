@@ -2,7 +2,7 @@
 
 What has been confirmed with real files at each bank. A file can follow the FEBRABAN manual exactly and still be rejected by a bank that applies its own rules, so this table only lists results someone actually reported.
 
-**Nothing has been confirmed yet.** If you send a remessa generated or checked here, please [report the result](https://github.com/KelvuHQ/cnab-generator/issues/new?template=bank-result.yml), accepted or rejected. A rejection with its code is just as useful.
+**Nothing has been confirmed yet.** If you send a remessa generated or checked here, please [report the result](https://github.com/alajter/cnab-generator/issues/new?template=bank-result.yml), accepted or rejected. A rejection with its code is just as useful.
 
 | Bank | Code | Status | Notes |
 |---|---|---|---|

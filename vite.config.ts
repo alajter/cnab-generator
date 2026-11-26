@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 
-// Served from https://kelvuhq.github.io/cnab-generator/
+// Served from https://alajter.github.io/cnab-generator/
 export default defineConfig({
   base: './',
   build: { outDir: 'dist', target: 'es2022' },

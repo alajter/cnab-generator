@@ -2,7 +2,7 @@
 
 Gere e valide arquivos de remessa de pagamentos CNAB 240 (FEBRABAN) a partir de uma planilha, no navegador.
 
-**[Abrir o app](https://kelvuhq.github.io/cnab-generator/)** · [English](README.md) · [Guia da planilha](docs/guia.md) · [Roadmap](docs/product/roadmap.md)
+**[Abrir o app](https://alajter.github.io/cnab-generator/)** · [English](README.md) · [Guia da planilha](docs/guia.md) · [Roadmap](docs/product/roadmap.md)
 
 ![Gerando uma remessa a partir da planilha](docs/images/generate-result.jpg)
 
@@ -32,12 +32,12 @@ Pix (formas 45 e 47), boletos (segmento J), tributos (segmentos N e O) e leitura
 
 ## Como usar
 
-**No navegador:** [kelvuhq.github.io/cnab-generator](https://kelvuhq.github.io/cnab-generator/). Clique em *Usar dados de exemplo* para ver o fluxo completo.
+**No navegador:** [alajter.github.io/cnab-generator](https://alajter.github.io/cnab-generator/). Clique em *Usar dados de exemplo* para ver o fluxo completo.
 
 **Na linha de comando:**
 
 ```sh
-git clone https://github.com/KelvuHQ/cnab-generator && cd cnab-generator
+git clone https://github.com/alajter/cnab-generator && cd cnab-generator
 npm ci && npm run build:cli
 node dist-cli/cnab.mjs gerar examples/pagamentos.csv --pagador examples/pagador.json --nsa 1
 node dist-cli/cnab.mjs validar remessa-pagamentos.rem
@@ -47,8 +47,8 @@ As colunas da planilha e os erros mais comuns estão no [guia](docs/guia.md).
 
 ## Ajude a validar nos bancos
 
-Os testes garantem que o arquivo segue o manual FEBRABAN. Falta confirmar, banco por banco, que os sistemas de cada um aceitam. Se você enviar uma remessa gerada aqui, [conte o resultado](https://github.com/KelvuHQ/cnab-generator/issues/new?template=bank-result.yml), mesmo que tenha sido rejeitada.
+Os testes garantem que o arquivo segue o manual FEBRABAN. Falta confirmar, banco por banco, que os sistemas de cada um aceitam. Se você enviar uma remessa gerada aqui, [conte o resultado](https://github.com/alajter/cnab-generator/issues/new?template=bank-result.yml), mesmo que tenha sido rejeitada.
 
 ## Licença
 
-MIT. Feito por [André Lajter](https://github.com/Andrel666). Não é afiliado à FEBRABAN nem a nenhum banco.
+MIT. Feito por [André Lajter](https://github.com/alajter). Não é afiliado à FEBRABAN nem a nenhum banco.

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Obrigado! Isso alimenta a [tabela de compatibilidade](https://github.com/KelvuHQ/cnab-generator/blob/main/docs/bank-compatibility.md).
+        Obrigado! Isso alimenta a [tabela de compatibilidade](https://github.com/alajter/cnab-generator/blob/main/docs/bank-compatibility.md).
         **Não anexe arquivos com dados reais.**
   - type: input
     id: banco

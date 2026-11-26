@@ -4,7 +4,7 @@ Ordered by what moves the outcome (files accepted by the bank on the first try),
 
 ## Now: prove it at the banks
 
-- Collect acceptance reports through the [issue form](https://github.com/KelvuHQ/cnab-generator/issues/new?template=bank-result.yml) and record them in the [compatibility table](../bank-compatibility.md).
+- Collect acceptance reports through the [issue form](https://github.com/alajter/cnab-generator/issues/new?template=bank-result.yml) and record them in the [compatibility table](../bank-compatibility.md).
 - Turn each rejection into a validator rule or a bank note, with a test file.
 
 Exit: confirmed acceptance at five banks, including at least two of Itaú, Banco do Brasil, Bradesco, Caixa and Santander.

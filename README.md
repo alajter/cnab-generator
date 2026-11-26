@@ -2,7 +2,7 @@
 
 Generate and validate FEBRABAN CNAB 240 payment files (*remessa de pagamentos*) from a spreadsheet, in the browser.
 
-**[Open the app](https://kelvuhq.github.io/cnab-generator/)** · [Português](README.pt-BR.md) · [Docs](docs/README.md) · [Roadmap](docs/product/roadmap.md)
+**[Open the app](https://alajter.github.io/cnab-generator/)** · [Português](README.pt-BR.md) · [Docs](docs/README.md) · [Roadmap](docs/product/roadmap.md)
 
 ![Generating a remessa from a spreadsheet](docs/images/generate-result.jpg)
 
@@ -39,12 +39,12 @@ Pix (formas 45 and 47), boletos (segment J), taxes (segments N and O), salary ca
 
 ## Use it
 
-**In the browser:** [kelvuhq.github.io/cnab-generator](https://kelvuhq.github.io/cnab-generator/). Click *Usar dados de exemplo* to see the whole flow in ten seconds.
+**In the browser:** [alajter.github.io/cnab-generator](https://alajter.github.io/cnab-generator/). Click *Usar dados de exemplo* to see the whole flow in ten seconds.
 
 **From the command line:**
 
 ```sh
-git clone https://github.com/KelvuHQ/cnab-generator && cd cnab-generator
+git clone https://github.com/alajter/cnab-generator && cd cnab-generator
 npm ci && npm run build:cli
 node dist-cli/cnab.mjs gerar examples/pagamentos.csv --pagador examples/pagador.json --nsa 1
 node dist-cli/cnab.mjs validar remessa-pagamentos.rem
@@ -75,7 +75,7 @@ The spreadsheet format is in the [user guide (Portuguese)](docs/guia.md).
 npm test
 ```
 
-What is **not** proven yet: acceptance by each bank's systems. That needs real files sent through real bank accounts, which is the first item on the [roadmap](docs/product/roadmap.md). If you send one, please [report the result](https://github.com/KelvuHQ/cnab-generator/issues/new?template=bank-result.yml).
+What is **not** proven yet: acceptance by each bank's systems. That needs real files sent through real bank accounts, which is the first item on the [roadmap](docs/product/roadmap.md). If you send one, please [report the result](https://github.com/alajter/cnab-generator/issues/new?template=bank-result.yml).
 
 ## Product docs
 
@@ -92,4 +92,4 @@ Bug reports with a (fake-data) file attached are the most useful thing you can s
 
 ## License
 
-MIT. Built by [André Lajter](https://github.com/Andrel666). Not affiliated with FEBRABAN or any bank. The FEBRABAN manual is the authority; this tool is an aid, not a certification.
+MIT. Built by [André Lajter](https://github.com/alajter). Not affiliated with FEBRABAN or any bank. The FEBRABAN manual is the authority; this tool is an aid, not a certification.

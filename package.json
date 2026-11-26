@@ -5,10 +5,10 @@
   "type": "module",
   "license": "MIT",
   "author": "André Lajter",
-  "homepage": "https://kelvuhq.github.io/cnab-generator/",
+  "homepage": "https://alajter.github.io/cnab-generator/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KelvuHQ/cnab-generator.git"
+    "url": "git+https://github.com/alajter/cnab-generator.git"
   },
   "keywords": [
     "cnab",
